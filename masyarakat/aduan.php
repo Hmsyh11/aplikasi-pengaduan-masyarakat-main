@@ -7,8 +7,9 @@
                     <h6>PENGADUAN</h6>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
-                    <div class="table-responsive p-0">
-                        <table class="table table-striped align-items-center mb-0">
+    <div class="table-responsive" style="max-height: 70vh; overflow-y: auto; overflow-x: auto;">
+        <table class="table table-striped align-items-center mb-0">
+
                             <thead class="text-center">
                                 <tr>
                                     <th class="text-center text-uppercase text-dark text-xs font-weight-bolder opacity-7">No</th>

@@ -21,6 +21,7 @@
                         <tbody>
                             <?php
                             include "../config/koneksi.php";
+
                             $query = mysqli_query($conn, "SELECT * FROM petugas"); //query data dari tabel petugas
                             $no = 1;
                             while ($data = mysqli_fetch_array($query)) {
@@ -32,6 +33,63 @@
                                     <td class="align-middle text-center text-sm"><?= $data['telp']; ?></td>
                                     <td class="align-middle text-center text-sm"><?= $data['level']; ?></td>
                                     <td class="align-middle text-center">
+
+                                        <!-- EDIT (BARU) -->
+                                        <span class="badge badge-sm bg-warning">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#edit<?= $data['id_petugas'] ?>" style="text-decoration: none; color: white;">EDIT</a>
+                                        </span>
+
+                                        <!-- modal EDIT -->
+                                        <div class="modal fade" id="edit<?= $data['id_petugas'] ?>" tabindex="-1" aria-labelledby="editLabel<?= $data['id_petugas'] ?>" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="editLabel<?= $data['id_petugas'] ?>">Edit Data Petugas</h1>
+                                                        <button type="button" class="btn-close bg-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <form action="" method="POST">
+                                                        <div class="modal-body">
+                                                            <input type="hidden" name="id_petugas" value="<?= $data['id_petugas']; ?>">
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Nama Lengkap</label>
+                                                                <input type="text" name="nama" class="form-control" value="<?= htmlspecialchars($data['nama_petugas']); ?>" required>
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Username</label>
+                                                                <input type="text" name="username" class="form-control" value="<?= htmlspecialchars($data['username']); ?>" required>
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Password (kosongkan jika tidak diganti)</label>
+                                                                <input type="password" name="password" class="form-control" placeholder="Isi jika ingin ganti password">
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">No. Telepon</label>
+                                                                <input type="number" name="telp" class="form-control" value="<?= htmlspecialchars($data['telp']); ?>" required>
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Level</label>
+                                                                <select name="level" class="form-control" required>
+                                                                    <option value="admin"   <?= $data['level'] == 'admin' ? 'selected' : ''; ?>>Admin</option>
+                                                                    <option value="petugas" <?= $data['level'] == 'petugas' ? 'selected' : ''; ?>>Petugas</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                                            <button type="submit" name="update_petugas" class="btn btn-primary">Simpan Perubahan</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /modal-EDIT -->
+                                        <!-- /EDIT -->
+
                                         <!-- HAPUS -->
                                         <span class="badge badge-sm bg-danger">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#hapus<?= $data['id_petugas'] ?>" style="text-decoration: none; color: white;">HAPUS</a>
@@ -113,40 +171,87 @@
     </div>
 </div>
 <!-- /modal- TAMBAH PETUGAS -->
-<?php
 
-include '../config/koneksi.php';
+<?php
+// pakai koneksi dari include di atas (sudah include "../config/koneksi.php")
+
+// UPDATE DATA PETUGAS (BARU)
+if (isset($_POST["update_petugas"])) {
+    $id_petugas = mysqli_real_escape_string($conn, $_POST["id_petugas"]);
+    $nama       = mysqli_real_escape_string($conn, $_POST["nama"]);
+    $username   = mysqli_real_escape_string($conn, $_POST["username"]);
+    $telp       = mysqli_real_escape_string($conn, $_POST["telp"]);
+    $level      = mysqli_real_escape_string($conn, $_POST["level"]);
+    $passBaru   = $_POST["password"];
+
+    // kalau password diisi, update juga password (md5)
+    if (!empty($passBaru)) {
+        $password    = mysqli_real_escape_string($conn, md5($passBaru));
+        $queryUpdate = "UPDATE petugas 
+                        SET nama_petugas='$nama',
+                            username='$username',
+                            password='$password',
+                            telp='$telp',
+                            level='$level'
+                        WHERE id_petugas='$id_petugas'";
+    } else {
+        // kalau password kosong, jangan overwrite password lama
+        $queryUpdate = "UPDATE petugas 
+                        SET nama_petugas='$nama',
+                            username='$username',
+                            telp='$telp',
+                            level='$level'
+                        WHERE id_petugas='$id_petugas'";
+    }
+
+    $update = mysqli_query($conn, $queryUpdate);
+
+    if ($update) {
+        echo "
+            <script>
+                alert('Data petugas berhasil diubah');
+                document.location.href='index.php?page=petugas';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('Data petugas gagal diubah');
+                document.location.href='index.php?page=petugas';
+            </script>
+        ";
+    }
+}
+
+// INSERT DATA PETUGAS (ASLI, TETAP DIPAKAI)
 if (isset($_POST["kirim"])) {
 
     //TANGKAP DATA DARI VAR POST DI DALAM FORM
-    $nama = $_POST["nama"];
+    $nama     = $_POST["nama"];
     $username = $_POST["username"];
     $password = md5($_POST["password"]);
-    $telp = $_POST["telp"];
-    $level = 'petugas';
+    $telp     = $_POST["telp"];
+    $level    = 'petugas';
 
     //INSERT DATA KE TABEL PETUGAS
     $query = mysqli_query($conn, "INSERT INTO petugas 
                         VALUES ('','$nama','$username','$password','$telp','$level') ");
 
-
     //Pengkondisian SETELAH INSERT AKAN DI BAWA KEMANA
     if ($query) {
-
         echo "
-                        <script>
-                         alert('Data Petugas Berhasil Ditambahkan');
-                         document.location.href='index.php?page=petugas';
-                     </script>
-                 ";
+            <script>
+                alert('Data Petugas Berhasil Ditambahkan');
+                document.location.href='index.php?page=petugas';
+            </script>
+        ";
     } else {
         echo "
-                     <script>
-                         alert('Data Petugas Gagal Ditambahkan');
-                         document.location.href='index.php?page=petugas';
-                     </script>
-                 ";
+            <script>
+                alert('Data Petugas Gagal Ditambahkan');
+                document.location.href='index.php?page=petugas';
+            </script>
+        ";
     }
 }
-
 ?>

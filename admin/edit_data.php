@@ -36,25 +36,34 @@ if (isset($_POST['hapus_pengaduan'])) {
 
 //untuk hapus Tanggapan
 if (isset($_POST['hapus_tanggapan'])) {
-    //menampung data dari id_tangagpan dan id_pengaduan
     $id_tanggapan = mysqli_real_escape_string($conn, $_POST["id_tanggapan"]);
     $id_pengaduan = mysqli_real_escape_string($conn, $_POST["id_pengaduan"]);
 
-    //sintaks sql untuk menghapus pengaduan dan tanggapan
+    // ambil data pengaduan untuk hapus foto
+    $q_pengaduan = mysqli_query($conn, "SELECT * FROM pengaduan WHERE id_pengaduan = '$id_pengaduan'");
+    if ($q_pengaduan && mysqli_num_rows($q_pengaduan) > 0) {
+        $dp = mysqli_fetch_assoc($q_pengaduan);
+        if (!empty($dp['foto']) && is_file("../database/img/" . $dp['foto'])) {
+            unlink("../database/img/" . $dp['foto']);
+        }
+    }
+
     $h_tanggapan = mysqli_query($conn, "DELETE FROM tanggapan WHERE id_tanggapan = '$id_tanggapan'");
     $h_pengaduan = mysqli_query($conn, "DELETE FROM pengaduan WHERE id_pengaduan = '$id_pengaduan'");
+
     if ($h_tanggapan && $h_pengaduan) {
         echo "<script>
-                 alert('Data Berhasil di Hapus');
-                document.location.href='index.php?page=tanggapan';
-            </script>";
+                 alert('Data Berhasil dihapus');
+                 document.location.href='index.php?page=tanggapan';
+              </script>";
     } else {
         echo "<script>
-                 alert('Data Gagal di HAPUS');
-                document.location.href='index.php?page=tanggapan';
-            </script>";
+                 alert('Data Gagal dihapus');
+                 document.location.href='index.php?page=tanggapan';
+              </script>";
     }
 }
+
 
 //untuk hapus Petugas
 if (isset($_POST['hapus_petugas'])) {

@@ -63,10 +63,13 @@
             <a class="nav-link" href="index.php?page=pengaduan">Data Pengaduan</a>
             <a class="nav-link" href="../config/aksi_logout.php">Log-out</a>
           <?php  } elseif ($_SESSION["login"] == 'masyarakat') { ?>
-            <a class="nav-link" href="index.php">Form Pengaduan</a>
-            <a class="nav-link" href="index.php?page=aduan">Daftar Pengaduan </a>
-            <a class="nav-link" href="../config/aksi_logout.php">Log-out</a>
-          <?php  } else { ?>
+    <a class="nav-link" href="index.php?page=dashboard">Dashboard</a>
+    <a class="nav-link" href="index.php?page=home">Form Pengaduan</a>
+    <a class="nav-link" href="index.php?page=aduan">Daftar Pengaduan</a>
+    <a class="nav-link" href="../config/aksi_logout.php">Log-out</a>
+<?php  } else { ?>
+
+
             <a class="nav-link" href="index.php?page=registrasi">Daftar Akun</a>
             <a class="nav-link" href="index.php?page=login">Halo</a>
           <?php  } ?>

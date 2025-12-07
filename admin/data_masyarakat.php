@@ -32,6 +32,55 @@
                                     <td class="align-middle text-center text-sm"><?= $data['username']; ?></td>
                                     <td class="align-middle text-center text-sm"><?= $data['telp']; ?></td>
                                     <td class="align-middle text-center">
+
+                                        <!-- EDIT (BARU) -->
+                                        <span class="badge badge-sm bg-warning">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#edit<?= $data['nik'] ?>" style="text-decoration: none; color:white;">EDIT</a>
+                                        </span>
+
+                                        <!-- modal EDIT -->
+                                        <div class="modal fade" id="edit<?= $data['nik'] ?>" tabindex="-1" aria-labelledby="editLabel<?= $data['nik'] ?>" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="editLabel<?= $data['nik'] ?>">Edit Data Masyarakat</h1>
+                                                        <button type="button" class="btn-close bg-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <form action="" method="POST">
+                                                        <div class="modal-body">
+                                                            <input type="hidden" name="nik" value="<?= $data['nik']; ?>">
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Nama Lengkap</label>
+                                                                <input type="text" name="nama" class="form-control" value="<?= htmlspecialchars($data['nama']); ?>" required>
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Username</label>
+                                                                <input type="text" name="username" class="form-control" value="<?= htmlspecialchars($data['username']); ?>" required>
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">Password (kosongkan jika tidak diganti)</label>
+                                                                <input type="password" name="password" class="form-control" placeholder="Isi jika ingin ganti password">
+                                                            </div>
+
+                                                            <div class="mb-3 text-start">
+                                                                <label class="form-label">No. Telepon</label>
+                                                                <input type="number" name="telp" class="form-control" value="<?= htmlspecialchars($data['telp']); ?>" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                                            <button type="submit" name="update_masyarakat" class="btn btn-primary">Simpan Perubahan</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /modal-EDIT -->
+                                        <!-- /EDIT -->
+
                                         <!-- HAPUS -->
                                         <span class="badge badge-sm bg-danger">
                                             <a href=" #" data-bs-toggle="modal" data-bs-target="#hapus<?= $data['nik'] ?>" style="text-decoration: none; color:white;">HAPUS</a>
@@ -69,6 +118,7 @@
         </div>
     </div>
 </div>
+
 <!-- Modal Tambah Data-->
 <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="verifikasiLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -117,43 +167,87 @@
         </div>
     </div>
 </div>
-<!-- /modal-VERIFIKASI -->
-<!-- /VERIVIKASI -->
-<?php
+<!-- /modal-TAMBAH -->
 
+<?php
 include '../config/koneksi.php';
+
+// UPDATE DATA MASYARAKAT (BARU)
+if (isset($_POST["update_masyarakat"])) {
+
+    $nik      = mysqli_real_escape_string($conn, $_POST["nik"]);
+    $nama     = mysqli_real_escape_string($conn, $_POST["nama"]);
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $telp     = mysqli_real_escape_string($conn, $_POST["telp"]);
+    $passBaru = $_POST["password"];
+
+    // kalau password diisi, update juga password (md5)
+    if (!empty($passBaru)) {
+        $password = mysqli_real_escape_string($conn, md5($passBaru));
+        $queryUpdate = "UPDATE masyarakat 
+                        SET nama='$nama',
+                            username='$username',
+                            password='$password',
+                            telp='$telp'
+                        WHERE nik='$nik'";
+    } else {
+        // kalau password kosong, jangan overwrite password lama
+        $queryUpdate = "UPDATE masyarakat 
+                        SET nama='$nama',
+                            username='$username',
+                            telp='$telp'
+                        WHERE nik='$nik'";
+    }
+
+    $update = mysqli_query($conn, $queryUpdate);
+
+    if ($update) {
+        echo "
+            <script>
+                alert('Data masyarakat berhasil diubah');
+                document.location.href='index.php?page=masyarakat';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('Data masyarakat gagal diubah');
+                document.location.href='index.php?page=masyarakat';
+            </script>
+        ";
+    }
+}
+
+// INSERT DATA BARU (SUDAH ADA, TETAP DIPAKAI)
 if (isset($_POST["kirim"])) {
 
     //TANGKAP DATA DARI VAR POST DI DALAM FORM
-    $nik = htmlspecialchars($_POST["nik"]);
-    $nama = htmlspecialchars($_POST["nama"]);
+    $nik      = htmlspecialchars($_POST["nik"]);
+    $nama     = htmlspecialchars($_POST["nama"]);
     $username = htmlspecialchars($_POST["username"]);
     $password = htmlspecialchars(md5($_POST["password"]));
-    $telp = htmlspecialchars($_POST["telp"]);
-    $level = 'masyarakat';
+    $telp     = htmlspecialchars($_POST["telp"]);
+    $level    = 'masyarakat';
 
     //INSERT DATA KE TABEL MASYARAKAT
     $query = mysqli_query($conn, "INSERT INTO masyarakat 
                         VALUES ('$nik','$nama','$username','$password','$telp','$level') ");
 
-
     //Pengkondisian SETELAH INSERT AKAN DI BAWA KEMANA
     if ($query) {
-
         echo "
-                        <script>
-                         alert('Data Berhasil Ditambahkan');
-                         document.location.href='index.php?page=masyarakat';
-                     </script>
-                 ";
+            <script>
+                alert('Data Berhasil Ditambahkan');
+                document.location.href='index.php?page=masyarakat';
+            </script>
+        ";
     } else {
         echo "
-                     <script>
-                         alert('Data Gagal Ditambahkan');
-                         document.location.href='index.php?page=masyarakat';
-                     </script>
-                 ";
+            <script>
+                alert('Data Gagal Ditambahkan');
+                document.location.href='index.php?page=masyarakat';
+            </script>
+        ";
     }
 }
-
 ?>
