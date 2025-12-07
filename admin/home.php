@@ -20,22 +20,31 @@ $jml_petugas = mysqli_num_rows($petugas); //menggunakan mysqli_num_rows untuk me
         <!-- INFORMASI PENGGUNAAN DASHBOARD (BARU) -->
         <div class="row mb-4">
             <div class="col-12">
-                <div class="alert alert-info" role="alert">
-                    <h5 class="mb-2">Selamat datang di Dashboard Admin Aplikasi Pengaduan Masyarakat</h5>
-                    <p class="mb-1">
-                        Melalui halaman ini, admin dapat memantau dan mengelola seluruh aktivitas pengaduan masyarakat.
-                        Gunakan menu yang tersedia di sidebar untuk:
-                    </p>
-                    <ul class="mb-1">
-                        <li><strong>Data Pengaduan</strong> &mdash; melihat, memverifikasi status, memberi tanggapan, mengedit, dan menghapus pengaduan.</li>
-                        <li><strong>Data Tanggapan</strong> &mdash; melihat, mengedit, dan menghapus tanggapan yang telah diberikan.</li>
-                        <li><strong>Data Masyarakat</strong> &mdash; mengelola akun masyarakat (tambah, edit, hapus).</li>
-                        <li><strong>Data Petugas</strong> &mdash; mengelola akun petugas dan admin (tambah, edit, hapus).</li>
-                    </ul>
-                    <p class="mb-0">
-                        Pastikan setiap pengaduan ditindaklanjuti sesuai prosedur, dan status pengaduan selalu diperbarui agar informasi yang tampil kepada masyarakat tetap akurat.
-                    </p>
-                </div>
+               <div class="p-4 mb-4" 
+     style="background: linear-gradient(135deg, #1A73E8, #4FC3F7); 
+            color: white; 
+            border-radius: 12px;">
+                    
+    <h5 class="mb-3" style="font-weight:700;">Selamat datang di Dashboard Admin Aplikasi Pengaduan Masyarakat</h5>
+
+    <p class="mb-2">
+        Melalui halaman ini, admin dapat memantau dan mengelola seluruh aktivitas pengaduan masyarakat.
+        Gunakan menu yang tersedia di sidebar untuk:
+    </p>
+
+    <ul>
+        <li><strong>Data Pengaduan</strong> — melihat, memverifikasi status, memberi tanggapan, mengedit, dan menghapus pengaduan.</li>
+        <li><strong>Data Tanggapan</strong> — melihat, mengedit, dan menghapus tanggapan yang telah diberikan.</li>
+        <li><strong>Data Masyarakat</strong> — mengelola akun masyarakat (tambah, edit, hapus).</li>
+        <li><strong>Data Petugas</strong> — mengelola akun petugas dan admin (tambah, edit, hapus).</li>
+    </ul>
+
+    <p class="mb-0">
+        Pastikan setiap pengaduan ditindaklanjuti sesuai prosedur,
+        dan status pengaduan selalu diperbarui agar informasi yang tampil kepada masyarakat tetap akurat.
+    </p>
+</div>
+
             </div>
         </div>
     <?php } ?>

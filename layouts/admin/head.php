@@ -20,4 +20,41 @@
      <!-- CSS Files -->
      <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 
+     <style>
+  /* SIDEBAR ADMIN: benar-benar nggak bisa scroll */
+#sidenav-main,
+#sidenav-collapse-main,
+.sidenav,
+.navbar-vertical .navbar-collapse {
+    max-height: none !important;
+    height: auto !important;
+    overflow-y: hidden !important;   /* ⬅ ini yang bikin wheel nggak nge-scroll lagi */
+}
+
+/* Hilangin scrollbar kalau ada sisa-sisa */
+#sidenav-main::-webkit-scrollbar,
+#sidenav-collapse-main::-webkit-scrollbar,
+.sidenav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+#sidenav-main,
+#sidenav-collapse-main,
+.sidenav {
+    scrollbar-width: none;
+}
+
+/* Matikan perfect scrollbar rail */
+.sidenav .ps__rail-y,
+.sidenav .ps__thumb-y {
+    display: none !important;
+}
+
+</style>
+
+
+
+
  </head>

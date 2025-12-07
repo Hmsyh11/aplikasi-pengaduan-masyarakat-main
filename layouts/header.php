@@ -20,7 +20,7 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 
-  <style>
+    <style>
     /* Media query untuk layar desktop */
     @media screen and (min-width: 768px) {
       .footer {
@@ -29,6 +29,22 @@
         bottom: 0;
         width: 100%;
       }
+    }
+
+    /* === NAVBAR TANPA SCROLL HORIZONTAL === */
+    body {
+      overflow-x: hidden; /* cegah scroll horizontal */
+    }
+
+    .navbar-nav {
+      display: flex;
+      flex-wrap: wrap;           /* kalau kepanjangan, turun ke baris berikutnya */
+      justify-content: center;   /* rata tengah */
+      gap: 24px;                 /* jarak antar menu */
+    }
+
+    .navbar-nav .nav-link {
+      white-space: nowrap;       /* teks menu nggak patah di tengah */
     }
   </style>
 

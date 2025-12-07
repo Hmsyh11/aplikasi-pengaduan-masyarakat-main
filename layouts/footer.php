@@ -1,8 +1,4 @@
-<footer class="footer mt-3 py-2 bg-success bg-opacity-50">
-  <div class="container">
-    <p class="text-center text-xl text-bold " style="color:black;"> Pemrograman 2 | Hilmi Ilhamsyah | Universitas Pamulang</p>
-  </div>
-</footer>
+
 
 <script src="../assets/js/bootstrap.min.js"></script>
 <!--   Core JS Files   -->
