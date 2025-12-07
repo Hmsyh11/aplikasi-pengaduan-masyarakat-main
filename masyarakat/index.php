@@ -1,35 +1,38 @@
-  <?php
-  session_start();
-  include '../layouts/header.php';
+<?php
+session_start();
+include '../layouts/header.php';
 
-  //ini program untuk menendang user NAKAL
-  if (empty($_SESSION['login'] == "masyarakat")) {
-    //user NAKAL dialihkan ke halaman login untuk login
+// ini program untuk menendang user NAKAL
+if (!isset($_SESSION['login']) || $_SESSION['login'] != "masyarakat") {
     header("Location:../index.php?page=login");
-    die();
-  }
-    
-  if (isset($_GET['page'])) {
-    $page = $_GET['page'];
+    exit;
+}
 
-    switch ($page) {
-      case 'tanggapan':
-        include 'tanggapan.php';
+// kalau nggak ada ?page, pakai 'dashboard' sebagai default
+$page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
+
+switch ($page) {
+    case 'dashboard':      // DASHBOARD MASYARAKAT
+        include 'dashboard.php';
         break;
-      case 'aduan':
+
+    case 'home':           // FORM PENGADUAN
+        include 'home.php';
+        break;
+
+    case 'aduan':          // DAFTAR PENGADUAN
         include 'aduan.php';
         break;
-      default:
-        echo "HALAMAN TAK TERSEDIA";
+
+    case 'tanggapan':      // (kalau nanti dipakai)
+        include 'tanggapan.php';
         break;
-    }
-  } else {
-    include 'home.php';
-  }
 
-  include '../layouts/footer.php';
+    default:
+        // kalau page nggak dikenal, balik lagi ke dashboard
+        include 'dashboard.php';
+        break;
+}
 
-
-
-
-  ?>
+include '../layouts/footer.php';
+?>
