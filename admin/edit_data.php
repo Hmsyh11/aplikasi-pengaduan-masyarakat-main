@@ -65,25 +65,40 @@ if (isset($_POST['hapus_tanggapan'])) {
 }
 
 
-//untuk hapus Petugas
+// untuk hapus Petugas
 if (isset($_POST['hapus_petugas'])) {
-    //menampung data id_petugas
     $id_petugas = mysqli_real_escape_string($conn, $_POST["id_petugas"]);
 
-    //sintaks sql untuk menghapus data petugas
+    // 1. Cek apakah petugas ini sudah pernah dipakai di tabel tanggapan
+    $cek_relasi = mysqli_query($conn, "SELECT 1 FROM tanggapan WHERE id_petugas = '$id_petugas' LIMIT 1");
+
+    if ($cek_relasi && mysqli_num_rows($cek_relasi) > 0) {
+        // ada tanggapan yang pakai petugas ini -> jangan hapus
+        echo "<script>
+                alert('Data petugas tidak dapat dihapus karena sudah dipakai pada data tanggapan.');
+                document.location.href='index.php?page=petugas';
+              </script>";
+        exit;
+    }
+
+    // 2. Kalau tidak dipakai, baru boleh hapus
     $delete = mysqli_query($conn, "DELETE FROM petugas WHERE id_petugas = '$id_petugas'");
-    if ($delete) {
+
+    if ($delete && mysqli_affected_rows($conn) > 0) {
         echo "<script>
-                 alert('Data Berhasil di Hapus');
+                alert('Data petugas berhasil dihapus.');
                 document.location.href='index.php?page=petugas';
-            </script>";
+              </script>";
     } else {
+        // tampilkan pesan gagal + error mysql buat debugging
+        $err = mysqli_error($conn);
         echo "<script>
-                 alert('Data Gagal di HAPUS');
+                alert('Data petugas gagal dihapus. Error: " . addslashes($err) . "');
                 document.location.href='index.php?page=petugas';
-            </script>";
+              </script>";
     }
 }
+
 
 //untuk hapus masyarakat
 if (isset($_POST['hapus_masyarakat'])) {

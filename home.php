@@ -25,7 +25,7 @@
 </nav>
 <div class="container">
 
-    <h4 class="text-center mt-3">Ujian Tengah Semester <br> Pemrograman web <br> Tahun 2025/2026</h4>
+    <h4 class="text-center mt-3">Tugas Akhir <br> Pemrograman web <br> Tahun 2025/2026</h4>
     <hr>
 
     <div class="row mt-3">
