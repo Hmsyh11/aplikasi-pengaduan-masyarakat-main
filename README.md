@@ -92,6 +92,9 @@ Digunakan admin untuk mengelola akun masyarakat.
 Digunakan admin untuk mengelola akun petugas.
 ![Data Petugas](assets/screenshot/data-petugas.png)
 
+TEST IMAGE: ![test](assets/screenshot/login.png)
+
+
 ⬇️ Download
 Silakan klik tombol di bawah ini untuk mengunduh source code aplikasi dalam format .zip:
 
