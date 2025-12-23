@@ -32,38 +32,65 @@ Aplikasi ini menerapkan konsep **CRUD (Create, Read, Update, Delete)** dan memil
 ✔ Dashboard berbeda sesuai hak akses pengguna
 ✔ Pengelolaan pengaduan dan tanggapan
 
-📸 Screenshot Aplikasi
-Berikut adalah beberapa tampilan utama dari Aplikasi Pengaduan Masyarakat (APEM):
+## 📸 Screenshot Aplikasi
 
-🔐 Halaman Login
-Digunakan oleh masyarakat, petugas, dan admin untuk masuk ke dalam sistem sesuai dengan hak akses masing-masing.
+### 🔐 Halaman Login
+Digunakan oleh masyarakat, petugas, dan admin untuk masuk ke dalam sistem.
+![Login](assets/screenshot/login.png)
 
-📝 Halaman Registrasi
-Digunakan oleh masyarakat untuk melakukan pendaftaran akun sebelum dapat mengajukan pengaduan.
+---
 
-🏠 Dashboard Masyarakat
-Menampilkan ringkasan data serta status pengaduan yang telah dikirim oleh masyarakat.
+### 📝 Halaman Registrasi
+Digunakan oleh masyarakat untuk membuat akun baru.
+![Registrasi](assets/screenshot/registrasi.png)
 
-📤 Form Pengaduan
-Digunakan oleh masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.
+---
 
-📋 Daftar Pengaduan Masyarakat
-Menampilkan seluruh riwayat pengaduan yang pernah dikirim beserta status dan tanggapan.
+### 🏠 Dashboard Masyarakat
+Menampilkan ringkasan data dan status pengaduan masyarakat.
+![Dashboard Masyarakat](assets/screenshot/dashboard-masyarakat.png)
 
-🛠️ Dashboard Admin
-Menampilkan ringkasan data pengaduan, jumlah masyarakat, petugas, dan tanggapan.
+---
 
-📑 Data Pengaduan
-Digunakan admin untuk melihat, memverifikasi, dan mengelola data pengaduan masyarakat.
+### 📤 Form Pengaduan
+Digunakan masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.
+![Form Pengaduan](assets/screenshot/form-pengaduan.png)
 
-💬 Data Tanggapan
-Menampilkan tanggapan yang telah diberikan oleh petugas atau admin terhadap pengaduan masyarakat.
+---
 
-👥 Data Masyarakat
-Digunakan admin untuk mengelola data akun masyarakat.
+### 📋 Daftar Pengaduan Masyarakat
+Menampilkan riwayat pengaduan yang pernah dikirim.
+![Daftar Pengaduan](assets/screenshot/daftar-pengaduan-masyarakat.png)
 
-🧑‍💼 Data Petugas
-Digunakan admin untuk mengelola data akun petugas yang memiliki akses ke sistem.
+---
+
+### 🛠️ Dashboard Admin
+Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.
+![Dashboard Admin](assets/screenshot/dashboard-admin.png)
+
+---
+
+### 📑 Data Pengaduan
+Digunakan admin untuk mengelola pengaduan masyarakat.
+![Data Pengaduan](assets/screenshot/data-pengaduan-admin.png)
+
+---
+
+### 💬 Data Tanggapan
+Menampilkan tanggapan terhadap pengaduan masyarakat.
+![Data Tanggapan](assets/screenshot/data-tanggapan.png)
+
+---
+
+### 👥 Data Masyarakat
+Digunakan admin untuk mengelola akun masyarakat.
+![Data Masyarakat](assets/screenshot/data-masyarakat.png)
+
+---
+
+### 🧑‍💼 Data Petugas
+Digunakan admin untuk mengelola akun petugas.
+![Data Petugas](assets/screenshot/data-petugas.png)
 
 ⬇️ Download
 Silakan klik tombol di bawah ini untuk mengunduh source code aplikasi dalam format .zip:
@@ -73,4 +100,4 @@ Silakan klik tombol di bawah ini untuk mengunduh source code aplikasi dalam form
 👨‍💻 Informasi Pengembang
 Nama : Hilmi Ilhamsyah
 Program Studi : Teknik Informatika
-Universitas : Universitas Pamulang.
+Universitas : Universitas Pamulang
