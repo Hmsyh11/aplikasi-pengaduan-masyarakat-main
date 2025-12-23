@@ -57,42 +57,42 @@ Digunakan oleh masyarakat untuk membuat akun baru.
 🏠 Dashboard Masyarakat
 
 Menampilkan ringkasan data dan status pengaduan masyarakat.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/dashboard-masyarakat.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/dashboard ms.png?raw=1" width="800">
 
 📤 Form Pengaduan
 
 Digunakan masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/form-pengaduan.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/frompengaduan ms?raw=1" width="800">
 
 📋 Daftar Pengaduan Masyarakat
 
 Menampilkan riwayat pengaduan yang pernah dikirim.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/daftar-pengaduan-masyarakat.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data pengaduan ms.png?raw=1" width="800">
 
 🛠️ Dashboard Admin
 
 Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/dashboard-admin.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/dashboard admin.png?raw=1" width="800">
 
 📑 Data Pengaduan
 
 Digunakan admin untuk mengelola pengaduan masyarakat.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-pengaduan-admin.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-pengaduan admin.png?raw=1" width="800">
 
 💬 Data Tanggapan
 
 Menampilkan tanggapan terhadap pengaduan masyarakat.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-tanggapan.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/tanggapan admin.png?raw=1" width="800">
 
 👥 Data Masyarakat
 
 Digunakan admin untuk mengelola akun masyarakat.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-masyarakat.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data masyarakat.png?raw=1" width="800">
 
 🧑‍💼 Data Petugas
 
 Digunakan admin untuk mengelola akun petugas.
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-petugas.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data petugas.png?raw=1" width="800">
 
 ⬇️ Download
 
