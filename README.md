@@ -36,69 +36,74 @@ Aplikasi ini menerapkan konsep **CRUD (Create, Read, Update, Delete)** dan memil
 
 ### 🔐 Halaman Login
 Digunakan oleh masyarakat, petugas, dan admin untuk masuk ke dalam sistem.
-![Login](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/login.png)
+<img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/5cc4040c-01f1-4355-963f-023918a1d107" />
+
 
 ---
 
 ### 📝 Halaman Registrasi
 Digunakan oleh masyarakat untuk membuat akun baru.
-![Registrasi](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/registrasi.png)
+<img width="1920" height="1080" alt="Screenshot (116)" src="https://github.com/user-attachments/assets/5e5209bc-b2e3-4853-83da-4323d808b4a1" />
+
 
 
 ---
 
 ### 🏠 Dashboard Masyarakat
 Menampilkan ringkasan data dan status pengaduan masyarakat.
-![Dashboard Masyarakat](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/dashboard-masyarakat.png)
+<img width="1920" height="1080" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/b583bbe3-6aaf-4798-9ed7-d5ee4a24a3e2" />
 
 
 ---
 
 ### 📤 Form Pengaduan
 Digunakan masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.
-![Form Pengaduan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/form-pengaduan.png)
+<img width="1920" height="1080" alt="Screenshot (128)" src="https://github.com/user-attachments/assets/8c533756-9f3e-43f4-b6b4-01ba3b0e4c4b" />
+
 
 
 ---
 
 ### 📋 Daftar Pengaduan Masyarakat
 Menampilkan riwayat pengaduan yang pernah dikirim.
-![Daftar Pengaduan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/daftar-pengaduan-masyarakat.png)
+<img width="1920" height="1080" alt="Screenshot (129)" src="https://github.com/user-attachments/assets/3d30a94d-4912-43c1-8434-bd49246dce5a" />
+
 
 
 ---
 
 ### 🛠️ Dashboard Admin
 Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.
-![Dashboard Admin](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/dashboard-admin.png)
+<img width="1920" height="1080" alt="Screenshot (120)" src="https://github.com/user-attachments/assets/d34bda84-3120-4f85-b769-c426c8fdff6f" />
 
 
 ---
 
 ### 📑 Data Pengaduan
 Digunakan admin untuk mengelola pengaduan masyarakat.
-![Data Pengaduan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-pengaduan-admin.png)
+<img width="1920" height="1080" alt="Screenshot (122)" src="https://github.com/user-attachments/assets/f3ecd4da-c703-4f2d-918f-0d5e3f5a3d0c" />
 
 
 ---
 
 ### 💬 Data Tanggapan
 Menampilkan tanggapan terhadap pengaduan masyarakat.
-![Data Tanggapan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-tanggapan.png)
+<img width="1920" height="1080" alt="Screenshot (121)" src="https://github.com/user-attachments/assets/a2e3c65e-cf59-4fc7-8766-826a80f596ec" />
+
 
 
 ---
 
 ### 👥 Data Masyarakat
 Digunakan admin untuk mengelola akun masyarakat.
-![Data Masyarakat](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-masyarakat.png)
+<img width="1920" height="1080" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/b4966063-43c1-4df4-86f3-8ffc9b9c2208" />
 
 
 ---
 
 ### 🧑‍💼 Data Petugas
 Digunakan admin untuk mengelola akun petugas.
-![Data Petugas](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-petugas.png)
+<img width="1920" height="1080" alt="Screenshot (123)" src="https://github.com/user-attachments/assets/7a9c7fa0-0968-45a0-b609-fc2270fde087" />
 
 
 TEST IMAGE: ![test](assets/screenshot/login.png)
