@@ -34,71 +34,36 @@ Aplikasi ini menerapkan konsep **CRUD (Create, Read, Update, Delete)** dan memil
 
 ## 📸 Screenshot Aplikasi
 
-### 🔐 Halaman Login
-Digunakan oleh masyarakat, petugas, dan admin untuk masuk ke dalam sistem.
-![Login](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/login.png)
+<h3>Halaman Login</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/login.png?raw=1" width="800">
 
----
+<h3>Halaman Registrasi</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/registrasi.png?raw=1" width="800">
 
-### 📝 Halaman Registrasi
-Digunakan oleh masyarakat untuk membuat akun baru.
-![Registrasi](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/registrasi.png)
+<h3>Dashboard Masyarakat</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/dashboard-masyarakat.png?raw=1" width="800">
 
+<h3>Form Pengaduan</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/form-pengaduan.png?raw=1" width="800">
 
----
+<h3>Daftar Pengaduan Masyarakat</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/daftar-pengaduan-masyarakat.png?raw=1" width="800">
 
-### 🏠 Dashboard Masyarakat
-Menampilkan ringkasan data dan status pengaduan masyarakat.
-![Dashboard Masyarakat](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/dashboard-masyarakat.png)
+<h3>Dashboard Admin</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/dashboard-admin.png?raw=1" width="800">
 
+<h3>Data Pengaduan</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-pengaduan-admin.png?raw=1" width="800">
 
----
+<h3>Data Tanggapan</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-tanggapan.png?raw=1" width="800">
 
-### 📤 Form Pengaduan
-Digunakan masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.
-![Form Pengaduan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/form-pengaduan.png)
+<h3>Data Masyarakat</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-masyarakat.png?raw=1" width="800">
 
+<h3>Data Petugas</h3>
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-petugas.png?raw=1" width="800">
 
----
-
-### 📋 Daftar Pengaduan Masyarakat
-Menampilkan riwayat pengaduan yang pernah dikirim.
-![Daftar Pengaduan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/daftar-pengaduan-masyarakat.png)
-
-
----
-
-### 🛠️ Dashboard Admin
-Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.
-![Dashboard Admin](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/dashboard-admin.png)
-
-
----
-
-### 📑 Data Pengaduan
-Digunakan admin untuk mengelola pengaduan masyarakat.
-![Data Pengaduan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-pengaduan-admin.png)
-
-
----
-
-### 💬 Data Tanggapan
-Menampilkan tanggapan terhadap pengaduan masyarakat.
-![Data Tanggapan](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-tanggapan.png)
-
-
----
-
-### 👥 Data Masyarakat
-Digunakan admin untuk mengelola akun masyarakat.
-![Data Masyarakat](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-masyarakat.png)
-
-
----
-
-### 🧑‍💼 Data Petugas
-Digunakan admin untuk mengelola akun petugas.
-![Data Petugas](https://raw.githubusercontent.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/main/assets/screenshot/data-petugas.png)
 
 
 TEST IMAGE: ![test](assets/screenshot/login.png)
