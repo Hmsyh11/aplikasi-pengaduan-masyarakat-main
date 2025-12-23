@@ -100,4 +100,4 @@ Silakan klik tombol di bawah ini untuk mengunduh source code aplikasi dalam form
 👨‍💻 Informasi Pengembang
 Nama : Hilmi Ilhamsyah
 Program Studi : Teknik Informatika
-Universitas : Universitas Pamulang
+Universitas : Universitas Pamulang.
