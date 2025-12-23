@@ -47,7 +47,7 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi:
 
 ### 🔐 Halaman Login
 Digunakan oleh masyarakat, petugas, dan admin untuk masuk ke dalam sistem.  
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/login.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/from-login.png?raw=1" width="800">
 
 ### 📝 Halaman Registrasi
 Digunakan oleh masyarakat untuk membuat akun baru.  
@@ -59,11 +59,11 @@ Menampilkan ringkasan data dan status pengaduan masyarakat.
 
 ### 📤 Form Pengaduan
 Digunakan masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.  
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/form-pengaduan.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/from-pengaduan.png?raw=1" width="800">
 
 ### 📋 Daftar Pengaduan Masyarakat
 Menampilkan riwayat pengaduan yang pernah dikirim.  
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/daftar-pengaduan-masyarakat.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/pengaduan-masyarakat.png?raw=1" width="800">
 
 ### 🛠️ Dashboard Admin
 Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.  
@@ -71,7 +71,7 @@ Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.
 
 ### 📑 Data Pengaduan
 Digunakan admin untuk mengelola pengaduan masyarakat.  
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-pengaduan-admin.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-pengaduan.png?raw=1" width="800">
 
 ### 💬 Data Tanggapan
 Menampilkan tanggapan terhadap pengaduan masyarakat.  
@@ -84,6 +84,7 @@ Digunakan admin untuk mengelola akun masyarakat.
 ### 🧑‍💼 Data Petugas
 Digunakan admin untuk mengelola akun petugas.  
 <img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-petugas.png?raw=1" width="800">
+
 
 
 
