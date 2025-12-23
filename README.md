@@ -63,7 +63,7 @@ Digunakan masyarakat untuk mengirim laporan pengaduan beserta foto pendukung.
 
 ### 📋 Daftar Pengaduan Masyarakat
 Menampilkan riwayat pengaduan yang pernah dikirim.  
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-pengaduan-masyarakat.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/daftar-pengaduan-masyarakat.png?raw=1" width="800">
 
 ### 🛠️ Dashboard Admin
 Menampilkan ringkasan data pengaduan, petugas, dan masyarakat.  
@@ -75,7 +75,7 @@ Digunakan admin untuk mengelola pengaduan masyarakat.
 
 ### 💬 Data Tanggapan
 Menampilkan tanggapan terhadap pengaduan masyarakat.  
-<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/tanggapan-admin.png?raw=1" width="800">
+<img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-tanggapan.png?raw=1" width="800">
 
 ### 👥 Data Masyarakat
 Digunakan admin untuk mengelola akun masyarakat.  
@@ -84,6 +84,7 @@ Digunakan admin untuk mengelola akun masyarakat.
 ### 🧑‍💼 Data Petugas
 Digunakan admin untuk mengelola akun petugas.  
 <img src="https://github.com/Hmsyh11/aplikasi-pengaduan-masyarakat-main/blob/main/assets/screenshot/data-petugas.png?raw=1" width="800">
+
 
 
 ⬇️ Download
